@@ -10,7 +10,7 @@
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  YOUR NAME (), 
+ *         Author:  vasy (vasy.chan@gmail.com), 
  *        Company:  
  *
  * =====================================================================================
@@ -24,10 +24,32 @@
 #include "search_song.h"
 #include "http_client.h"
 #include "sound.h"
+#include <gstreamermm/init.h>
+#include <gstreamermm/element.h>
+#include <gstreamermm/elementfactory.h>
+#include <gstreamermm/pad.h>
+#include <gstreamermm/pipeline.h>
+#include <gstreamermm/playbin2.h>
+#include <gstreamermm/ximagesink.h>
 
 
 namespace window
 {
+
+            bool on_bus_callback(const Glib::RefPtr<Gst::Bus> &bus, const Glib::RefPtr<Gst::Message> &message, Glib::RefPtr<Glib::MainLoop> &loop)
+            {
+                //I am not sure if it should be Glib::RefPtr<Glib::MainLoop> &loop
+                //or Glib::RefPtr<Glib::MainLoop> loop. It works though
+                switch(message->get_message_type())
+                {
+                    case Gst::MESSAGE_EOS:
+                        loop->quit();
+                        break;        
+                }
+                        
+                return true;
+            }
+
     Glib::StaticMutex mutex = GLIBMM_STATIC_MUTEX_INIT; 
 
     class Worker {
@@ -159,16 +181,38 @@ namespace window
                    m_end_thread = true; // sagen wir dem Thread das er beenden soll
               }
               if(_refresh_worker->joinable())
-                _refresh_worker->join();      
+                _refresh_worker->join(); 
+               if(_stream_worker->joinable())
+                _stream_worker->join();    
             }
 
+ 
             void ThreadStreamWorker()
             {
-                Glib::RefPtr<Glib::MainLoop> loop = Glib::MainLoop::create();
-                Sound * sound_ptr = new Sound(); 
-                sound_ptr->start_playing();
+                //Glib::RefPtr<Glib::MainLoop> loop = Glib::MainLoop::create();
+                //Sound * sound_ptr = new Sound(); 
+                //sound_ptr->start_playing();
 
-                loop->run();
+                //loop->run();
+                std::cout << "ThreadStreamWorker start. " << "\n";
+                Gst::init();    
+                Glib::RefPtr<Gst::PlayBin2> playbin = Gst::PlayBin2::create();
+                Glib::ustring path = Glib::get_current_dir();
+                Glib::ustring songName = "http://192.168.0.60:8000/test";
+                playbin->property_uri()  = songName;
+                Glib::RefPtr<Glib::MainLoop> loop = Glib::MainLoop::create();
+                
+                //get the bus
+                Glib::RefPtr<Gst::Bus> bus = playbin->get_bus();        
+                //Add a bus watch. Bind to the slot the loop variable so you don't
+                //have to declare it as global.    
+                //bus->add_watch(sigc::bind(sigc::ptr_fun(&on_bus_callback), loop)); 
+                std::cout << "NOW PLAYING" << "\n";
+                playbin->set_state(Gst::STATE_PLAYING);
+                loop->run(); //execution blocks here until loop->quit() is called
+                //loop->quit() has been called.
+                std::cout<< "done\n";
+                playbin->set_state(Gst::STATE_NULL); 
 
             }
 
