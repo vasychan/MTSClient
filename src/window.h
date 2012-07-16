@@ -164,11 +164,11 @@ namespace window
 
             void ThreadStreamWorker()
             {
-                //Glib::RefPtr<Glib::MainLoop> loop = Glib::MainLoop::create();
-                // Sound * sound_ptr = new Sound(); 
-                // sound_ptr->start_playing();
+                Glib::RefPtr<Glib::MainLoop> loop = Glib::MainLoop::create();
+                Sound * sound_ptr = new Sound(); 
+                sound_ptr->start_playing();
 
-                //loop->run();
+                loop->run();
 
             }
 
