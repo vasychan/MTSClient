@@ -36,10 +36,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vasy/projects/mts_client
+CMAKE_SOURCE_DIR = /home/vasy/projects_new/MTSClient
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vasy/projects/mts_client/debug
+CMAKE_BINARY_DIR = /home/vasy/projects_new/MTSClient/debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -66,14 +66,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/vasy/projects/mts_client/debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/vasy/projects/mts_client/debug/CMakeFiles /home/vasy/projects/mts_client/debug/src/CMakeFiles/progress.marks
-	cd /home/vasy/projects/mts_client/debug && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vasy/projects/mts_client/debug/CMakeFiles 0
+	cd /home/vasy/projects_new/MTSClient/debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/vasy/projects_new/MTSClient/debug/CMakeFiles /home/vasy/projects_new/MTSClient/debug/src/CMakeFiles/progress.marks
+	cd /home/vasy/projects_new/MTSClient/debug && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vasy/projects_new/MTSClient/debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/vasy/projects/mts_client/debug && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/vasy/projects_new/MTSClient/debug && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -82,22 +82,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/vasy/projects/mts_client/debug && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/vasy/projects_new/MTSClient/debug && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/vasy/projects/mts_client/debug && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/vasy/projects_new/MTSClient/debug && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/vasy/projects/mts_client/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/vasy/projects_new/MTSClient/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/mtc_client.dir/rule:
-	cd /home/vasy/projects/mts_client/debug && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/mtc_client.dir/rule
+	cd /home/vasy/projects_new/MTSClient/debug && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/mtc_client.dir/rule
 .PHONY : src/CMakeFiles/mtc_client.dir/rule
 
 # Convenience name for target.
@@ -106,7 +106,7 @@ mtc_client: src/CMakeFiles/mtc_client.dir/rule
 
 # fast build rule for target.
 mtc_client/fast:
-	cd /home/vasy/projects/mts_client/debug && $(MAKE) -f src/CMakeFiles/mtc_client.dir/build.make src/CMakeFiles/mtc_client.dir/build
+	cd /home/vasy/projects_new/MTSClient/debug && $(MAKE) -f src/CMakeFiles/mtc_client.dir/build.make src/CMakeFiles/mtc_client.dir/build
 .PHONY : mtc_client/fast
 
 main.o: main.cpp.o
@@ -114,7 +114,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/vasy/projects/mts_client/debug && $(MAKE) -f src/CMakeFiles/mtc_client.dir/build.make src/CMakeFiles/mtc_client.dir/main.cpp.o
+	cd /home/vasy/projects_new/MTSClient/debug && $(MAKE) -f src/CMakeFiles/mtc_client.dir/build.make src/CMakeFiles/mtc_client.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -122,7 +122,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/vasy/projects/mts_client/debug && $(MAKE) -f src/CMakeFiles/mtc_client.dir/build.make src/CMakeFiles/mtc_client.dir/main.cpp.i
+	cd /home/vasy/projects_new/MTSClient/debug && $(MAKE) -f src/CMakeFiles/mtc_client.dir/build.make src/CMakeFiles/mtc_client.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -130,7 +130,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/vasy/projects/mts_client/debug && $(MAKE) -f src/CMakeFiles/mtc_client.dir/build.make src/CMakeFiles/mtc_client.dir/main.cpp.s
+	cd /home/vasy/projects_new/MTSClient/debug && $(MAKE) -f src/CMakeFiles/mtc_client.dir/build.make src/CMakeFiles/mtc_client.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -156,6 +156,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/vasy/projects/mts_client/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/vasy/projects_new/MTSClient/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -6,5 +6,6 @@ src/CMakeFiles/mtc_client.dir/main.cpp.o: ../src/http_client.h
 src/CMakeFiles/mtc_client.dir/main.cpp.o: ../src/main.cpp
 src/CMakeFiles/mtc_client.dir/main.cpp.o: ../src/playlist.h
 src/CMakeFiles/mtc_client.dir/main.cpp.o: ../src/search_song.h
+src/CMakeFiles/mtc_client.dir/main.cpp.o: ../src/sound.h
 src/CMakeFiles/mtc_client.dir/main.cpp.o: ../src/window.h
 

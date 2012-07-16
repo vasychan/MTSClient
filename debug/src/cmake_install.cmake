@@ -1,4 +1,4 @@
-# Install script for directory: /home/vasy/projects/mts_client/src
+# Install script for directory: /home/vasy/projects_new/MTSClient/src
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

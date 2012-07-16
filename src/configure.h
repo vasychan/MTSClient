@@ -36,4 +36,5 @@
 #include <boost/algorithm/string.hpp>
 #include <gtkmm-3.0/gtkmm.h>
 
+#include <gstreamermm-0.10/gstreamermm.h>
 #endif

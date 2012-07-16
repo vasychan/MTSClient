@@ -23,6 +23,7 @@
 #include "playlist.h"
 #include "search_song.h"
 #include "http_client.h"
+#include "sound.h"
 
 
 namespace window
@@ -146,6 +147,8 @@ namespace window
 
                 m_dispatcher.connect( sigc::mem_fun( m_pbar , &Gtk::ProgressBar::pulse )); 
 
+                _stream_worker = Glib::Thread::create( sigc::mem_fun(*this,&MainWindow::ThreadStreamWorker),true); 
+
             }
 
             ~MainWindow() 
@@ -158,6 +161,17 @@ namespace window
               if(_refresh_worker->joinable())
                 _refresh_worker->join();      
             }
+
+            void ThreadStreamWorker()
+            {
+                //Glib::RefPtr<Glib::MainLoop> loop = Glib::MainLoop::create();
+                // Sound * sound_ptr = new Sound(); 
+                // sound_ptr->start_playing();
+
+                //loop->run();
+
+            }
+
 
             void InitPlayList(PlaylistList playlist)
             {
@@ -380,6 +394,8 @@ namespace window
             //thread
             Worker * refresh;
             Glib::Thread * _refresh_worker;
+            Glib::Thread * _stream_worker;
+
             bool             m_end_thread; 
             Glib::Dispatcher m_dispatcher; 
 

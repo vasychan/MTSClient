@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/vasy/projects/mts_client/src/configure.h
+/home/vasy/projects_new/MTSClient/src/configure.h
 iostream
 -
 istream
@@ -29,20 +29,22 @@ boost/algorithm/string.hpp
 -
 gtkmm-3.0/gtkmm.h
 -
+gstreamermm-0.10/gstreamermm.h
+-
 
-/home/vasy/projects/mts_client/src/http_client.h
+/home/vasy/projects_new/MTSClient/src/http_client.h
 configure.h
-/home/vasy/projects/mts_client/src/configure.h
+/home/vasy/projects_new/MTSClient/src/configure.h
 
-/home/vasy/projects/mts_client/src/main.cpp
+/home/vasy/projects_new/MTSClient/src/main.cpp
 window.h
-/home/vasy/projects/mts_client/src/window.h
+/home/vasy/projects_new/MTSClient/src/window.h
 http_client.h
-/home/vasy/projects/mts_client/src/http_client.h
+/home/vasy/projects_new/MTSClient/src/http_client.h
 
-/home/vasy/projects/mts_client/src/playlist.h
+/home/vasy/projects_new/MTSClient/src/playlist.h
 configure.h
-/home/vasy/projects/mts_client/src/configure.h
+/home/vasy/projects_new/MTSClient/src/configure.h
 boost/property_tree/xml_parser.hpp
 -
 boost/property_tree/ptree.hpp
@@ -52,9 +54,9 @@ boost/foreach.hpp
 algorithm
 -
 
-/home/vasy/projects/mts_client/src/search_song.h
+/home/vasy/projects_new/MTSClient/src/search_song.h
 configure.h
-/home/vasy/projects/mts_client/src/configure.h
+/home/vasy/projects_new/MTSClient/src/configure.h
 boost/property_tree/xml_parser.hpp
 -
 boost/property_tree/ptree.hpp
@@ -64,13 +66,19 @@ boost/foreach.hpp
 algorithm
 -
 
-/home/vasy/projects/mts_client/src/window.h
+/home/vasy/projects_new/MTSClient/src/sound.h
 configure.h
-/home/vasy/projects/mts_client/src/configure.h
+/home/vasy/projects_new/MTSClient/src/configure.h
+
+/home/vasy/projects_new/MTSClient/src/window.h
+configure.h
+/home/vasy/projects_new/MTSClient/src/configure.h
 playlist.h
-/home/vasy/projects/mts_client/src/playlist.h
+/home/vasy/projects_new/MTSClient/src/playlist.h
 search_song.h
-/home/vasy/projects/mts_client/src/search_song.h
+/home/vasy/projects_new/MTSClient/src/search_song.h
 http_client.h
-/home/vasy/projects/mts_client/src/http_client.h
+/home/vasy/projects_new/MTSClient/src/http_client.h
+sound.h
+/home/vasy/projects_new/MTSClient/src/sound.h
 

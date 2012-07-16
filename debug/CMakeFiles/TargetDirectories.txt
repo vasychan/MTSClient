@@ -1,1 +1,1 @@
-/home/vasy/projects/mts_client/debug/src/CMakeFiles/mtc_client.dir
+/home/vasy/projects_new/MTSClient/debug/src/CMakeFiles/mtc_client.dir

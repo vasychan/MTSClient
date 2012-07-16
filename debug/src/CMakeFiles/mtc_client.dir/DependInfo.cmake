@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/vasy/projects/mts_client/src/main.cpp" "/home/vasy/projects/mts_client/debug/src/CMakeFiles/mtc_client.dir/main.cpp.o"
+  "/home/vasy/projects_new/MTSClient/src/main.cpp" "/home/vasy/projects_new/MTSClient/debug/src/CMakeFiles/mtc_client.dir/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -41,6 +41,12 @@ SET(CMAKE_C_TARGET_INCLUDE_PATH
   "/usr/lib/pangomm-1.4/include"
   "/usr/include/cairomm-1.0"
   "/usr/lib/cairomm-1.0/include"
+  "/usr/include/gstreamer-0.10"
+  "/usr/include/libxml2"
+  "/usr/include/gstreamermm-0.10"
+  "/usr/lib/gstreamermm-0.10/include"
+  "/usr/include/libxml++-2.6"
+  "/usr/lib/libxml++-2.6/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
